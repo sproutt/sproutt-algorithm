@@ -9,19 +9,17 @@ public class Baekjoon10989 {
         StringBuilder sb = new StringBuilder();
 
         int N = Integer.parseInt(br.readLine());
-
-        int[] numberCounts = new int[10001];
+        int[] counters = new int[10001];
 
         for (int i = 0; i < N; i++) {
-            numberCounts[Integer.parseInt(br.readLine())] ++;
+            counters[Integer.parseInt(br.readLine())]++;
         }
 
-        br.close();
-
-        for (int i = 1; i < numberCounts.length; i++) {
-            while (numberCounts[i] > 0) {
-                sb.append(i).append("\n");
-                numberCounts[i]--;
+        for (int i = 0; i < counters.length; i++) {
+            while (counters[i] > 0) {
+                sb.append(i)
+                  .append("\n");
+                counters[i]--;
             }
         }
         System.out.println(sb);
