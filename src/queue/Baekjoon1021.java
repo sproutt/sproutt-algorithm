@@ -28,8 +28,6 @@ public class Baekjoon1021 {
             deque.offer(i);
         }
 
-
-        int pollCount = 0;
         int result = 0;
 
         for (int i = 0; i < M; i++) {
