@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class Baekjoon9095 {
-    private static int sum = 0;
     private static int count = 0;
 
     public static void main(String[] args) throws Exception{
@@ -22,19 +21,19 @@ public class Baekjoon9095 {
     }
 
 
-    private static void dfs(int target, int n) {
-        if(target < n) {
+    private static void dfs(int target, int value) {
+        if(target < value) {
             return;
         }
-        if(target == n) {
+        if(target == value) {
             count++;
             return;
         }
 
         else {
-            dfs(target, n + 1);
-            dfs(target, n + 2);
-            dfs(target, n + 3);
+            dfs(target, value + 1);
+            dfs(target, value + 2);
+            dfs(target, value + 3);
         }
     }
 }
